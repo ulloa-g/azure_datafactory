@@ -20,3 +20,15 @@ Desde la página principal selecciona `Create a resource` y selecciona `Data Fac
 
 ![](img/1_create_resource.png)
 ![](img/2_datafactory.png)
+
+completa los siguientes campos, click en `Review + create` y en la proxima ventana `create`.
+
+![](img/3_create_adf.png)
+
+En la siguiente sección `lauch studio`.
+
+![](img/4_launch.png)
+
+## Azure Data Factory Studio
+Pantalla principal.
+![](img/5_home.png)
