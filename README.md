@@ -32,3 +32,17 @@ En la siguiente sección `lauch studio`.
 ## Azure Data Factory Studio
 Pantalla principal.
 ![](img/5_home.png)
+
+## Construcción de Pipeline
+### Creamos una conexión con un servicio para la fuente de datos.
+Dentro de la instancia de Azure Data Factory, ir a `Manage`. 
+
+Agregamos una conexión a un servicio.
+Click en `Linked services`. Luego en `Create linked service`. De la lista de opciones disponibles, seleccionamos `Azure Blob Storage`, y luego `continue`.
+
+![](img/6_azure_blob.png)
+
+Completa los campos y click en `create`.
+
+![](img/7_blobstorage.png)
+
