@@ -17,32 +17,28 @@ Puedes aprender más en [Microsoft Learn](https://learn.microsoft.com/en-us/azur
 - Una suscripción activa en Azure Portal.
 ### Crear una instancia Azure Data Factory
 Desde la página principal selecciona `Create a resource` y selecciona `Data Factory`.
-
 ![](img/1_create_resource.png)
 ![](img/2_datafactory.png)
 
 completa los siguientes campos, click en `Review + create` y en la proxima ventana `create`.
-
 ![](img/3_create_adf.png)
+![](img/3_deployment_complete.png)
 
-En la siguiente sección `lauch studio`.
+Nuestra pipeline moverá información de un archivo `.csv` a una base de datos `SQL`, necesitamos agregar estos recursos.
+En la pestaña `Create a resource`, seleccionamos `SQL database`.
+![](img/4_database.png)
 
-![](img/4_launch.png)
+Completa todos los campos, luego `Review + create`.
+![](img/5_sql_review.png)
 
-## Azure Data Factory Studio
-Pantalla principal.
-![](img/5_home.png)
+Nos queda pendiente un recurso para almacenar el archivo origen `.csv`. Para esto agregamos un nuevo recurso `Storage account`.
+![](img/6_storage.png)
+![](img/7_fill_this.png)
 
-## Construcción de Pipeline
-### Creamos una conexión con un servicio para la fuente de datos.
-Dentro de la instancia de Azure Data Factory, ir a `Manage`. 
+Finalizada la configuración por parte de Azure, click en `Go to resource`. En la pestaña `Data Storage`, click en `Containers` y luego en `+ Container`, por ultimo click en `Create`.
+![](img/8_container.png)
 
-Agregamos una conexión a un servicio.
-Click en `Linked services`. Luego en `Create linked service`. De la lista de opciones disponibles, seleccionamos `Azure Blob Storage`, y luego `continue`.
+Por último abrimos nuestro almacenamiento recién creado, y cargamos nuestro archivo de datos.
+![](img/9_input_storgae.png)
 
-![](img/6_azure_blob.png)
-
-Completa los campos y click en `create`.
-
-![](img/7_blobstorage.png)
-
+Ahora necesitamos configurar nuestra base de datos para esta información almacenada en un archivo `.csv`.
