@@ -41,4 +41,47 @@ Finalizada la configuración por parte de Azure, click en `Go to resource`. En l
 Por último abrimos nuestro almacenamiento recién creado, y cargamos nuestro archivo de datos.
 ![](img/9_input_storgae.png)
 
-Ahora necesitamos configurar nuestra base de datos para esta información almacenada en un archivo `.csv`.
+Ahora necesitamos configurar nuestra base de datos para esta información almacenada en un archivo `.csv`. Voy a la pestaña `Resource group`, selecciono el grupo donde he creado los recursos previamente, y selecciono mi base de datos `gulloa-db (gulloa-srv/gulloa-db)`. Ingreso con las credenciales configuradas en los pasos anteriores al `Query editor`. En este punto, voy a crear una tabla, que sea compatible para luego cargar los datos de mi archivo `.csv` en esta tabla.
+![](img/10_resource_g.png)
+
+Primero debemos configurar los accesos a nuestro servidor y base de datos desde otros servicios de azure.
+![](img/11_networking.png)
+
+Ahora ingresamos a nuestra base de datos y al `Query Editor` con las credenciales configuradas en pasos previos.
+![](img/12_login.png)
+
+Creamos una tabla en nuestra base de datos:
+```
+CREATE TABLE cars_table (
+    symboling INT,
+    "normalized-losses" FLOAT,
+    make VARCHAR(255),
+    aspiration VARCHAR(255),
+    "num-of-doors" VARCHAR(255),
+    "body-style" VARCHAR(255),
+    "drive-wheels" VARCHAR(255),
+    "engine-location" VARCHAR(255),
+    "wheel-base" FLOAT,
+    length FLOAT,
+    width FLOAT,
+    height FLOAT,
+    "curb-weight" INT,
+    "engine-type" VARCHAR(255),
+    "num-of-cylinders" VARCHAR(255),
+    "engine-size" INT,
+    "fuel-system" VARCHAR(255),
+    bore FLOAT,
+    stroke FLOAT,
+    "compression-ratio" FLOAT,
+    horsepower FLOAT,
+    "peak-rpm" FLOAT,
+    "city-L/100km" FLOAT,
+    "highway-mpg" INT,
+    price FLOAT,
+    "price-binned" VARCHAR(255),
+    "horsepower-binned" VARCHAR(255),
+    diesel INT,
+    gas INT
+);
+```
+![](img/13_create_table.png)
