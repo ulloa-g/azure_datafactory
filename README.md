@@ -92,6 +92,10 @@ En la pantalla principal vamos a `Author`.
 
 ### Creamos la pipeline
 
+La idea es realizar la siguiente conexión.
+![](img/26_pipeline_description.png)
+créditos para [Adam Marczak - Azure for Everyone](https://www.youtube.com/@AdamMarczakYT)
+
 ![](img/15_pipeline_creation.png)
 
 Debajo de la pestaña `Manage` vamos a crear un `Linked Service` a nuestro almacenamiento.
