@@ -85,3 +85,40 @@ CREATE TABLE cars_table (
 );
 ```
 ![](img/13_create_table.png)
+
+## Azure Data Factory Studio
+En la pantalla principal vamos a `Author`.
+![](img/14_adf_studio.png)
+
+### Creamos la pipeline
+
+![](img/15_pipeline_creation.png)
+
+Debajo de la pestaña `Manage` vamos a crear un `Linked Service` a nuestro almacenamiento.
+![](img/16_1st_linkedservice.png)
+
+Completa los campos y prueba la conexión, por último `Create`.
+![](img/17_campos.png)
+
+Nuevamente en el campo `Manage` agregamos un dataset.
+![](img/18_dataset.png)
+
+Ahora agregamos un segundo `Linked Service` esta vez para nuestra base de datos.
+![](img/19_2nd_linkedservice.png)
+
+Luego debemos agregar un segundo dataset
+![](img/20_dataset.png)
+
+Volvamos a nuestra pipeline la cual llamamos `csv_to_sql`. Agreguemos una actividad `copy data`.
+![](img/21_activity.png)
+
+Completamos los campos `source`, `sink`, `mapping`
+![](img/22_source.png)
+![](img/23_sink.png)
+![](img/23_schemas.png)
+
+Luego damos click en `Debug` y finalmente `Publish all`.
+![](img/24_debug.png)
+
+Verificamos nuestra tabla en la base de datos:
+![](img/25_run_query.png)
